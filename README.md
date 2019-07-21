@@ -6,11 +6,12 @@ I'm going to use this text editor mainly for writing on "little" code projects i
 Feel free to inform me about nice enhancements or things which are not handled so nice right now ;)
 
 ## Current Setup
+Clone this repository into $HOME/.config
 The setup consists of a main *init.vim* which has only one purpose - load the general.vim.
 From the general.vim all other vim configs are loaded (keys.vim, ...) and language specific configurations like c.vim.
 
 ## Necessary Programs
-- currenty none
+- [NeoVim](https://github.com/neovim/neovim)
 
 ## TODOS
 - add plugins for themes, autocompletion
