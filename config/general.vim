@@ -112,6 +112,8 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+" show matching brackets
 set showmatch
 
 " clear search
@@ -125,3 +127,13 @@ map <leader>de :setlocal spell! spelllang=de<CR>
 set listchars=tab:▸\ ,eol:¬,trail::
 " toggle tabs and eol
 map <leader>l :set list!<CR>
+
+" clipboard
+" copy
+noremap <C-c> "+y
+" paste
+noremap <C-v> "+p
+" cut
+noremap <C-x> "+d
+" paste in insert mode
+inoremap <C-v> <Esc>"+pa
