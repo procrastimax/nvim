@@ -125,9 +125,3 @@ map <leader>de :setlocal spell! spelllang=de<CR>
 set listchars=tab:▸\ ,eol:¬,trail::
 " toggle tabs and eol
 map <leader>l :set list!<CR>
-
-
-" ----------------------------------------
-" LOAD ALL SPECIFIC CONFIGS FOR SPECIFIC FILES
-" ----------------------------------------
-au FileType c source $HOME/.config/nvim/config/c.vim
