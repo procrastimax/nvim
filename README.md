@@ -1,4 +1,4 @@
-# neovim-conf
+# NeoVim Configuration
 This is my current neovim setup. Because the idea of creating a central (neo)vim setup for all my machines, is a very recent one, many things are missing and this thing is going to be expanded once in a while.
 My intention is to use as little as possible addons and other bloat.
 I'm going to use this text editor mainly for writing on "little" code projects in C, C++, Python, Bash and also for writing latex and markdown documents. So the whole setup is going to be wrapped around these tasks.
