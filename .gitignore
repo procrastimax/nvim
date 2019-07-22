@@ -1,3 +1,4 @@
-dein/
+dein/*
+!dein/DeinInstaller.sh
 TODO.md
 .netrwhist
