@@ -9,6 +9,7 @@ Feel free to inform me about nice enhancements or things which are not handled s
 Clone this repository into **$HOME/.config**.
 The setup consists of a main *init.vim* which has only one purpose - load the *general.vim*.
 From the general.vim all other vim configs are loaded (*keys.vim*, ...) and language specific configurations like *c.vim*.
+Don't forget to call `:call dein#install()` in nvim to download all plugins.
 
 ## Necessary Programs
 - [NeoVim](https://github.com/neovim/neovim)

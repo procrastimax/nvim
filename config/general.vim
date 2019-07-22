@@ -8,9 +8,11 @@
 " Helps force plugins to load correclty when it is turned back on below
 filetype off
 
-" -----------------
-" LOAD PLUGINS HERE
-" -----------------
+" ----------------------------------------
+" LOAD OTHER CONFIGS
+" ----------------------------------------
+source $HOME/.config/nvim/config/keys.vim
+source $HOME/.config/nvim/config/plugins.vim
 
 set number
 syntax on
@@ -32,6 +34,9 @@ set ruler
 
 " Blink cursor on error instead of sound beep
 " set visualbell
+
+" set colorscheme
+colorscheme srcery
 
 set encoding=utf-8
 
@@ -127,10 +132,6 @@ set listchars=tab:▸\ ,eol:¬,trail::
 " toggle tabs and eol
 map <leader>l :set list!<CR>
 
-" ----------------------------------------
-" LOAD OTHER CONFIGS
-" ----------------------------------------
-source $HOME/.config/nvim/config/keys.vim
 
 " ----------------------------------------
 " LOAD ALL SPECIFIC CONFIGS FOR SPECIFIC FILES
