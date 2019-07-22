@@ -5,15 +5,6 @@
 " - install plugins
 " - https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85/ -> functions of code block indentation etc
 
-" Helps force plugins to load correclty when it is turned back on below
-filetype off
-
-" ----------------------------------------
-" LOAD OTHER CONFIGS
-" ----------------------------------------
-source $HOME/.config/nvim/config/keys.vim
-source $HOME/.config/nvim/config/plugins.vim
-
 set number
 syntax on
 
@@ -57,9 +48,12 @@ set smarttab
 set wildmenu " visual autocomplete
 set wildmode=longest,list,full
 
-set lazyredraw " only redraw when we must
-set confirm "get dialog when :q, :w, :wq fails
-set mouse=v " use mouse in visual mode
+" only redraw when we must
+set lazyredraw
+" get dialog when :q, :w, :wq fails
+set confirm
+" use mouse in visual mode
+set mouse=v
 
 set splitbelow
 set splitright
