@@ -7,17 +7,29 @@ Feel free to inform me about nice enhancements or things which are not handled s
 
 ## Current Setup
 Clone this repository into **$HOME/.config**.
-The setup consists of a main *init.vim* which has only one purpose - load the *general.vim*.
-From the general.vim all other vim configs are loaded (*keys.vim*, ...) and language specific configurations like *c.vim*.
+The setup consists of a main *init.vim* which has only one purpose - load other vim config files.
+Language specific configs are loaded from the ftplugin folder with the structure: *language*.vim.
+
+Read the **AdditionalSetup.md**. Because for some plugins some pre-setup has to be done. For example python3 neovim client installation.
 
 After this, call the *DeinInstall.sh* script in the *dein* folder, this is going to download and install the dein plugin manager.
 Then exectute `:call dein#install()` in nvim to download all plugins.
+
+## Current Addons
+- Airline - a powerline status bar
+- deoplete - code completion framework
+- deoplete-clang - c/c++ completion
+- deoplete/jedi - python completion
 
 ## Necessary Programs
 - [NeoVim](https://github.com/neovim/neovim)
 
 ## TODOS
-- add plugins for themes, autocompletion
+- add plugins for usability
+- missing code completion for: 
+  - java
+  - js
+  - go
 - add more c, c++, python, latex, markdown specifications
 - improve overall setup
 
