@@ -31,6 +31,16 @@ colorscheme srcery
 
 set encoding=utf-8
 
+" no swap file
+set noswapfile
+
+set fileformat=unix
+
+" set colorcolumn=80
+set cursorline
+set linebreak
+
+
 " Whitespace
 set wrap
 set textwidth=79
@@ -130,10 +140,10 @@ map <leader>l :set list!<CR>
 
 " clipboard
 " copy
-noremap <C-c> "+y
+" noremap <C-c> "+y
 " paste
-noremap <C-v> "+p
+" noremap <C-v> "+p
 " cut
-noremap <C-x> "+d
+" noremap <C-x> "+d
 " paste in insert mode
-inoremap <C-v> <Esc>"+pa
+" inoremap <C-v> <Esc>"+pa
