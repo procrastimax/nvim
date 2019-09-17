@@ -38,12 +38,12 @@ set fileformat=unix
 
 " set colorcolumn=80
 set cursorline
-set linebreak
-
+ set linebreak
 
 " Whitespace
 set wrap
-set textwidth=79
+set wrapmargin=0
+set textwidth=0
 set formatoptions=tqn1
 
 set tabstop=8
