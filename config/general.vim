@@ -1,10 +1,3 @@
-" Todo:
-" - folding
-" - add more keys
-" - configure language specific settings
-" - install plugins
-" - https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85/ -> functions of code block indentation etc
-
 set number
 syntax on
 
@@ -94,7 +87,7 @@ runtime! marcos/matchit.vim
 " Allow hidden buffers
 set hidden
 " open new empty buffer
-nmap <leader>T :enew<CR>
+nmap <leader>bnew :enew<CR>
 " switch to next buffer
 nmap <leader>bn :bnext<CR>
 " switch to previous buffer
@@ -140,13 +133,3 @@ map <leader>de :setlocal spell! spelllang=de<CR>
 set listchars=tab:▸\ ,eol:¬,trail::
 " toggle tabs and eol
 map <leader>l :set list!<CR>
-
-" clipboard
-"" copy
-noremap <leader><C-c> "+y
-" paste
-noremap <leader><C-v> "+p
-" cut
-noremap <leader><C-x> "+d
-" paste in insert mode
-inoremap <C-v><Esc> "+pa
