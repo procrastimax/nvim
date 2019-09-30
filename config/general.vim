@@ -77,8 +77,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-j> <C-w>j
 "saner splits
-nnoremap <C-w>\| <C-w>v
-nnoremap <C-w>_ <C-w>s
+" nnoremap <C-w>v <C-w>v
+nnoremap <C-w>h <C-w>s
 "resizing splits
 nnoremap <C-w><C-w><C-w>h <C-w><
 nnoremap <C-w><C-w><C-w>l <C-w>>
