@@ -115,6 +115,9 @@ set title
 set showmode
 set showcmd
 
+" Reload Buffer when file changes
+set autoread
+
 " Searching
 nnoremap / /\v
 vnoremap / /\v
