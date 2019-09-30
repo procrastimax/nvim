@@ -139,11 +139,11 @@ set listchars=tab:▸\ ,eol:¬,trail::
 map <leader>l :set list!<CR>
 
 " clipboard
-" copy
-" noremap <C-c> "+y
+"" copy
+noremap <leader><C-c> "+y
 " paste
-" noremap <C-v> "+p
+noremap <leader><C-v> "+p
 " cut
-" noremap <C-x> "+d
+noremap <leader><C-x> "+d
 " paste in insert mode
-" inoremap <C-v> <Esc>"+pa
+inoremap <C-v><Esc> "+pa
