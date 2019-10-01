@@ -64,20 +64,6 @@ set splitright
 " Automatically delete all trailing whitespaces on save
 autocmd BufWritePre * %s/\s\+$//e
 
-"split movement
-nnoremap <C-h> <C-w>h
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-nnoremap <C-j> <C-w>j
-"saner splits
-" nnoremap <C-w>v <C-w>v
-nnoremap <C-w>h <C-w>s
-"resizing splits
-nnoremap <C-w><C-w><C-w>h <C-w><
-nnoremap <C-w><C-w><C-w>l <C-w>>
-nnoremap <C-w><C-w><C-w>k <C-w>-
-nnoremap <C-w><C-w><C-w>j <C-w>+
-
 " Cursor motion
 set scrolloff=3
 set backspace=indent,eol,start
@@ -86,16 +72,6 @@ runtime! marcos/matchit.vim
 
 " Allow hidden buffers
 set hidden
-" open new empty buffer
-nmap <leader>bnew :enew<CR>
-" switch to next buffer
-nmap <leader>bn :bnext<CR>
-" switch to previous buffer
-nmap <leader>bp :bprevious<CR>
-" close a current buffer and move to rpevious
-nmap <leader>bq :bp <BAR> bd #<CR>
-" show all buffers ad their status
-nmap <leader>bl :ls<CR>
 
 " Rendering
 set ttyfast
@@ -121,15 +97,3 @@ set smartcase
 
 " show matching brackets
 set showmatch
-
-" clear search
-map <leader><ESC> :let @/=''<cr>
-
-" spellchecing
-map <leader>en :setlocal spell! spelllang=en<CR>
-map <leader>de :setlocal spell! spelllang=de<CR>
-
-" Visualize tabs and newlines
-set listchars=tab:▸\ ,eol:¬,trail::
-" toggle tabs and eol
-map <leader>l :set list!<CR>
