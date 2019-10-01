@@ -33,4 +33,4 @@ inoremap ;while while(<++>){<CR>}<CR><ESC>
 inoremap ;for for(size_t i = 0; i < <++>; i++){<CR>}<ESC>
 
 " CREATE BASE PROGRAM
-inoremap ;base #include <stdlib.h><CR>#include <stdio.h><CR><CR>int main(void){<CR><CR>return EXIT_SUCCESS;<CR>}<ESC>
+inoremap ;base #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(void){<CR><CR>return EXIT_SUCCESS;<CR>}<ESC>
