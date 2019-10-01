@@ -24,13 +24,16 @@ nnoremap <F9> :w <bar> :15split <bar> terminal gcc -std=c99 -Wextra -Wall % -o %
 nnoremap tb ?<++><CR>d%i
 
 " CREATE IF-ELSE
-inoremap ;ife if (<++>) {<CR><CR>} else {<CR>}<CR><ESC>
+inoremap ??ife if (<++>) {<CR><CR>} else {<CR>}<CR><ESC>
+
+" CREATE IF
+inoremap ??if if (<++>) {<CR><CR>}<CR><ESC>
 
 " CREATE WHILE LOOP
-inoremap ;while while(<++>){<CR>}<CR><ESC>
+inoremap ??while while(<++>){<CR>}<CR><ESC>
 
 " Create FOR LOOP
-inoremap ;for for(size_t i = 0; i < <++>; i++){<CR>}<ESC>
+inoremap ??for for(size_t i = 0; i < <++>; i++){<CR>}<ESC>
 
 " CREATE BASE PROGRAM
-inoremap ;base #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(void){<CR><CR>return EXIT_SUCCESS;<CR>}<ESC>
+inoremap ??base #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(void){<CR><CR>return EXIT_SUCCESS;<CR>}<ESC>
