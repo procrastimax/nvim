@@ -40,8 +40,8 @@ map <leader>de :setlocal spell! spelllang=de<CR>
 "" AUTO CLOSE BRACKETS
 inoremap " ""<left>
 inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
 inoremap {<CR> {<CR>}<ESC>O
 
 "" UTILITIES
