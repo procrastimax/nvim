@@ -15,7 +15,7 @@ nnoremap <Leader>fo $mz%zf'z
 nnoremap <Leader>F :w <bar> :1,$d <bar> :0r !clang-format %<CR>jdd
 
 " Open horizontal terminal split and compile program there and execute it
-nnoremap <F9> :w <bar> :15split <bar> terminal gcc -std=c99 -Wextra -Wall % -o %:r && ./%:r<CR>
+nnoremap <F9> :w <bar> :15split <bar> terminal gcc -std=c11 -Wextra -Wall % -o %:r && ./%:r<CR>
 
 " ---------------
 " CODE SNIPPETS
