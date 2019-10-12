@@ -47,6 +47,9 @@ inoremap {<CR> {<CR>}<ESC>O
 "" UTILITIES
 " Find/Replace word under current cursor
 nnoremap <Leader>sr :%s/\<<C-r><C-w>\>//g<Left><Left>
+" Find the word under current cursor
+nnoremap <Leader>fi :/<C-r><C-w><CR>
+
 " clear search
 map <leader><ESC> :let @/=''<cr>
 " Visualize tabs and newlines
