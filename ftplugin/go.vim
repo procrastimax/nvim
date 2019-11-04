@@ -18,7 +18,9 @@ nnoremap <Leader>F :GoFmt<CR>
 " Open horizontal terminal split and compile program there and execute it
 nnoremap <F9> :w <bar> :15split <bar> terminal go run *.go<CR>
 
+" ---------------
 " AUTO CLOSE BRACKETS
+" ---------------
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
