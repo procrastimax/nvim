@@ -46,4 +46,4 @@ nnoremap tb ?<++><CR>d%i
 "inoremap ??for for(size_t i = 0; i < <++>; i++){<CR>}<ESC>
 
 " CREATE BASE PROGRAM
-"inoremap ??base package main<CR><CR>import (<CR>"fmt"<CR>)<CR>func main(){<CR>fmt.Println("Hello World")<CR>}<ESC>:GoFmt<CR>
+inoremap ??base package main<CR><CR>import (<CR>"fmt"<CR>)<CR>func main(){<CR>fmt.Println("Hello World")<CR>}<ESC>:GoFmt<CR>
