@@ -18,7 +18,9 @@ nnoremap <Leader>F :GoFmt<CR>
 " Open horizontal terminal split and compile program there and execute it
 nnoremap <F9> :w <bar> :15split <bar> terminal go run *.go<CR>
 
+" ---------------
 " AUTO CLOSE BRACKETS
+" ---------------
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
@@ -44,4 +46,4 @@ nnoremap tb ?<++><CR>d%i
 "inoremap ??for for(size_t i = 0; i < <++>; i++){<CR>}<ESC>
 
 " CREATE BASE PROGRAM
-"inoremap ??base package main<CR><CR>import (<CR>"fmt"<CR>)<CR>func main(){<CR>fmt.Println("Hello World")<CR>}<ESC>:GoFmt<CR>
+inoremap ??base package main<CR><CR>import (<CR>"fmt"<CR>)<CR>func main(){<CR>fmt.Println("Hello World")<CR>}<ESC>:GoFmt<CR>
