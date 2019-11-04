@@ -29,6 +29,9 @@ if dein#load_state('~/.config/nvim/dein')
     call dein#add('deoplete-plugins/deoplete-jedi')
     call dein#add('davidhalter/jedi')
 
+    " go plugin
+    call dein#add('fatih/vim-go')
+
     call dein#end()
 call dein#save_state()
 endif
@@ -44,3 +47,8 @@ endif
     call deoplete#custom#var('clangx', 'clang_binary', '/usr/lib/clang')
     let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
     let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+
+" vim-go configuration
+    let g:go_fmt_command = "goimports"
+    let g:go_def_mode='gopls'
+    let g:go_info_mode='gopls'
