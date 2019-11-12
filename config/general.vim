@@ -27,6 +27,9 @@ set encoding=utf-8
 " no swap file
 set noswapfile
 
+" use undofile after closing vim
+set undofile
+
 set fileformat=unix
 
 " set colorcolumn=80
