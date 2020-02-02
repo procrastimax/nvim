@@ -19,6 +19,8 @@ set ruler
 " Blink cursor on error instead of sound beep
 " set visualbell
 
+set termguicolors
+
 " set colorscheme
 colorscheme srcery
 

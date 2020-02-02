@@ -11,6 +11,7 @@ if dein#load_state('~/.config/nvim/dein')
     " --------------------
     " A colorscheme
     call dein#add('srcery-colors/srcery-vim')
+    call dein#add('jacoborus/tender')
 
     " Airline status bar
     call dein#add('vim-airline/vim-airline')
