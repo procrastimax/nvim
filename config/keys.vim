@@ -23,7 +23,7 @@ nnoremap <Leader>v "+p
 
 ""  BUFFERS
 " open new empty buffer
-nmap <leader>bnew :enew<CR>
+nmap <leader>bc :enew<CR>
 " switch to next buffer
 nmap <leader>bn :bnext<CR>
 " switch to previous buffer
