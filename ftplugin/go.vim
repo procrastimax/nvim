@@ -21,9 +21,6 @@ nnoremap <F9> :w <bar> :15split <bar> terminal go run *.go<CR>
 " ---------------
 " AUTO CLOSE BRACKETS
 " ---------------
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
 "inoremap [ []<left>
 inoremap {<CR> {<CR>}<ESC>O
 

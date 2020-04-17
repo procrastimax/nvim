@@ -5,7 +5,7 @@ syntax on
 filetype plugin indent on
 
 " disable expanding of comments to new lines
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o formatoptions+=l
 
 " Set leader key
 let mapleader = " "
@@ -36,12 +36,12 @@ set fileformat=unix
 
 " set colorcolumn=80
 set cursorline
- set linebreak
+set linebreak
 
 " Whitespace
-set wrap
-set wrapmargin=0
-set textwidth=0
+"set wrap
+"set wrapmargin=0
+"set textwidth=0
 set formatoptions=tqn1
 
 set tabstop=8
