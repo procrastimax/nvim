@@ -8,8 +8,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-w>v <C-w>v
 nnoremap <C-w>h <C-w>s
 "resizing splits
-nnoremap <C-w><C-w><C-w>h <C-w><
-nnoremap <C-w><C-w><C-w>l <C-w>>
+nnoremap <C-w><C-w><C-w>h <C-w>>
+nnoremap <C-w><C-w><C-w>l <C-w><
 nnoremap <C-w><C-w><C-w>k <C-w>-
 nnoremap <C-w><C-w><C-w>j <C-w>+
 
@@ -49,3 +49,6 @@ map <leader><ESC> :let @/=''<cr>
 set listchars=tab:▸\ ,eol:¬,trail::
 " toggle tabs and eol
 map <leader>l :set list!<CR>
+
+" Open Explore window
+nnoremap <F5> :Explore<CR>
