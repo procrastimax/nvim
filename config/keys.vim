@@ -13,6 +13,7 @@ nnoremap <C-w><C-w><C-w>l <C-w><
 nnoremap <C-w><C-w><C-w>k <C-w>-
 nnoremap <C-w><C-w><C-w>j <C-w>+
 
+
 "" COPY & PASTE
 " Copy from virtual selection
 vnoremap <Leader>c "+y
@@ -20,6 +21,7 @@ vnoremap <Leader>c "+y
 vnoremap <Leader>x "+x
 " Paste with current clipboard selection
 nnoremap <Leader>v "+p
+
 
 ""  BUFFERS
 " open new empty buffer
@@ -33,9 +35,22 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 " show all buffers ad their status
 nmap <leader>bl :ls<CR>
 
+
+"" Tabs
+" create new tab layout
+nmap <leader>tc :tabnew<CR>
+" close current tab layout
+nmap <leader>tq :tabclose<CR>
+" go to next tab
+nmap <leader>tn :tabnext<CR>
+" go to previous tab
+nmap <leader>tp :tabprevious<CR>
+
+
 "" SPELLCHECKING
 map <leader>en :setlocal spell! spelllang=en<CR>
 map <leader>de :setlocal spell! spelllang=de<CR>
+
 
 "" UTILITIES
 " Find/Replace word under current cursor
@@ -52,3 +67,6 @@ map <leader>l :set list!<CR>
 
 " Open Explore window
 nnoremap <F5> :Explore<CR>
+
+" open file in vim with fzf (fuzzy find)
+" nmap <leader>fzf :!nvim $(fzf)<CR>

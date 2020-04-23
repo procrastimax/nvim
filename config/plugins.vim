@@ -41,7 +41,10 @@ call dein#save_state()
 endif
 
 " Sking related:
+    " enable list of buffers
     let g:airline#extensions#tabline#enabled = 1
+    " only show filename of buffers
+    let g:airline#extensions#tabline#fnamemod = ':t'
     let g:airline_powerline_fonts = 1
     let g:airline_theme = 'zenburn'
 " Completion related:
@@ -59,4 +62,3 @@ endif
     let g:tex_conceal = ''
     let g:vimtex_fold_manual = 1
     let g:vimtex_latexmk_continuous = 1
-    let g:vimtex_compiler_progname = 'nvr'
