@@ -11,7 +11,6 @@ if dein#load_state('~/.config/nvim/dein')
     " --------------------
     " A colorscheme
     call dein#add('srcery-colors/srcery-vim')
-    call dein#add('jacoborus/tender')
 
     " Airline status bar
     call dein#add('vim-airline/vim-airline')
@@ -35,6 +34,9 @@ if dein#load_state('~/.config/nvim/dein')
 
     " vimtex for latex
     call dein#add('lervag/vimtex')
+
+    " fzf in neovim
+    call dein#add('junegunn/fzf')
 
     call dein#end()
 call dein#save_state()
