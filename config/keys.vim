@@ -66,4 +66,4 @@ map <leader>l :set list!<CR>
 nnoremap <F5> :Explore<CR>
 
 " open file in vim with fzf (fuzzy find)
-" nmap <leader>fzf :!nvim $(fzf)<CR>
+ nmap <leader>fzf :FZF ~/<CR>
