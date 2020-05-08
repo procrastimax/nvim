@@ -6,9 +6,6 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 
-" set omni patterns to enable go completion
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*',})
-
 " Folding a class/ method by its matching brackets -> only works when bracket is last character in the line
 nnoremap <Leader>fo $mz%zf'z
 

@@ -52,6 +52,8 @@ endif
 " Completion related:
     " enable deoplete at startup
     let g:deoplete#enable_at_startup = 1
+    set completeopt+=noselect
+    call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 " vim-go configuration
     let g:go_fmt_command = "goimports"
