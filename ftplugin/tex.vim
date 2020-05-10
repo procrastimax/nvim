@@ -10,9 +10,7 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 
-nnoremap <F9> :w <bar> :VimtexCompile <bar> :VimtexView<CR>
-
-" function to save, compile and view current tex file
+nnoremap <F9> :w<CR>:call SaveCompileView()<CR>
 
 function! SaveCompileView()
     :w
