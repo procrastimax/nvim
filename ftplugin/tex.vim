@@ -4,11 +4,11 @@ call deoplete#custom#var('omni', 'input_patterns', { 'tex': g:vimtex#re#deoplete
 " ---------------
 " AUTO CLOSE BRACKETS
 " ---------------
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
+"inoremap " ""<left>
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+"inoremap { {}<left>
 
 nnoremap <F9> :w<CR>:call SaveCompileView()<CR>
 

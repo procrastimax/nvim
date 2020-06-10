@@ -23,7 +23,7 @@ if dein#load_state('~/.config/nvim/dein')
     call dein#add('Shougo/neoinclude.vim')
 
     " c/c++ completion
-    call dein#add('Shougo/deoplete-clangx')
+    call dein#add('deoplete-plugins/deoplete-clang')
 
     " python completion
     call dein#add('deoplete-plugins/deoplete-jedi')
@@ -53,7 +53,7 @@ endif
     " enable deoplete at startup
     let g:deoplete#enable_at_startup = 1
     set completeopt+=noselect
-    call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+    call deoplete#custom#option('omni_patterns', {'go': '[^. *\t]\.\w*'})
 
 " vim-go configuration
     let g:go_fmt_command = "goimports"
