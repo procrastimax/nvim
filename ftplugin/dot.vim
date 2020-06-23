@@ -4,7 +4,7 @@
 " ---------------
 
 " Open horizontal terminal split and compile program there and execute it
-nnoremap <F9> :w <bar> :!dot -Tpng % -o %:r.png<CR>
+nnoremap <F9> :w <bar> :!dot -Tpng % -o %:r.png<CR><CR>
 
 
 
