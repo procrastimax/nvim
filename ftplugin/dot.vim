@@ -3,8 +3,12 @@
 " GENERAL STUFF
 " ---------------
 
-" Open horizontal terminal split and compile program there and execute it
+" render image to .png file
 nnoremap <F9> :w <bar> :!dot -Tpng % -o %:r.png<CR><CR>
+
+" render image to .png file and open file in feh
+nnoremap <F10> :w <bar> :!dot -Tpng % -o %:r.png<CR> <bar> :! feh %:r.png &<CR>
+
 
 
 
