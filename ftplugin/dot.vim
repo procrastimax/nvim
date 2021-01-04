@@ -6,10 +6,7 @@
 " search for a line that starts with 'msc {' -> indicates not a normal dot file
 let mscMode = search('^msc {')
 
-echom "hello world"
-
 if mscMode > 0
-
     " render image to .png file
     nnoremap <F9> :w <bar> :!mscgen -Tpng -i % -o %:r.png<CR><CR>
 
