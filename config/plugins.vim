@@ -38,6 +38,9 @@ if dein#load_state('~/.config/nvim/dein')
     " fzf in neovim
     call dein#add('junegunn/fzf')
 
+    " rust plugin
+    call dein#add('rust-lang/rust.vim')
+
     call dein#end()
 call dein#save_state()
 endif
