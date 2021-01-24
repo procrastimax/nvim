@@ -4,5 +4,6 @@
 set signcolumn=yes
 
 
-" autocomplete '{'-bracket
+" autocomplete '{/('-bracket
 inoremap {<CR> {<CR>}<ESC>O
+inoremap ( ()<ESC>i
