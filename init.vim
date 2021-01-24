@@ -55,15 +55,15 @@ end
 -- and map buffer local keybindings when the language server attaches
 local servers = { "pyls", "rust_analyzer", "gopls" }
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup { on_attach = require'completion'.on_attach }
+  nvim_lsp[lsp].setup { on_attach = on_attach }
 end
 EOF
 
 "lua << EOF
 "    require'lspconfig'.pyls.setup{on_attach=require'completion'.on_attach}
-"    require'lspconfig'.gopls.setup{on_attach=require'completion'.on_attach}
-"    require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_attach}
 "EOF
+
+autocmd BufEnter * lua require'completion'.on_attach()
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
