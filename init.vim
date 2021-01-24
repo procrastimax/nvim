@@ -2,7 +2,6 @@ source $HOME/.config/nvim/config/plugins.vim
 source $HOME/.config/nvim/config/general.vim
 source $HOME/.config/nvim/config/keys.vim
 
-
 lua << EOF
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
@@ -59,9 +58,11 @@ for _, lsp in ipairs(servers) do
 end
 EOF
 
-"lua << EOF
-"    require'lspconfig'.pyls.setup{on_attach=require'completion'.on_attach}
-"EOF
+let g:completion_chain_complete_list = {
+	    \'default' : [
+	    \    {'complete_items': ['lsp', 'path', 'snippet']},
+	    \]
+	    \}
 
 autocmd BufEnter * lua require'completion'.on_attach()
 
@@ -79,5 +80,4 @@ let g:completion_enable_auto_popup = 1
 imap <tab> <Plug>(completion_smart_tab)
 imap <s-tab> <Plug>(completion_smart_s_tab)
 
-let g:completion_trigger_character = ['.', '::', '->']
-
+let g:completion_trigger_character = ['.', '::']
