@@ -1,2 +1,2 @@
-" starting pyright
-
+" keep signcolumn open
+set signcolumn=yes

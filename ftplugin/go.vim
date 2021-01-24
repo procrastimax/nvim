@@ -2,7 +2,9 @@
 " GENERAL STUFF
 " ----------------
 
-lua require'lspconfig'.pyls.setup{on_attach=require'completion'.on_attach}
+" keep signcolumn open
+set signcolumn=yes
+
 
 set noexpandtab
 set shiftwidth=4
@@ -11,9 +13,6 @@ set tabstop=4
 
 " Folding a class/ method by its matching brackets -> only works when bracket is last character in the line
 nnoremap <Leader>fo $mz%zf'z
-
-" Autoformat the current buffer with clang-format
-nnoremap <Leader>F :GoFmt<CR>
 
 " Open horizontal terminal split and compile program there and execute it
 nnoremap <F9> :w <bar> :15split <bar> terminal go run *.go<CR>
