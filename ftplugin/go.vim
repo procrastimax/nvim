@@ -1,6 +1,9 @@
 " ----------------
 " GENERAL STUFF
 " ----------------
+
+lua require'lspconfig'.pyls.setup{on_attach=require'completion'.on_attach}
+
 set noexpandtab
 set shiftwidth=4
 set softtabstop=4
