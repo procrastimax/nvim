@@ -60,7 +60,7 @@ EOF
 
 let g:completion_chain_complete_list = {
 	    \'default' : [
-	    \    {'complete_items': ['lsp', 'path', 'snippet']},
+	    \    {'complete_items': ['lsp', 'snippet']},
 	    \]
 	    \}
 
