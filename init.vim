@@ -21,8 +21,23 @@ nvim_lsp.gopls.setup({ on_attach=on_attach })
 nvim_lsp.pyright.setup({ on_attach=on_attach })
 
 -- Enable rust_analyzer
-nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
-
+nvim_lsp.rust_analyzer.setup({
+    on_attach=on_attach,
+    settings = {
+        ["rust-analyzer"] = {
+            assist = {
+                importMergeBehavior = "last",
+                importPrefix = "by_self",
+            },
+            cargo = {
+                loadOutDirsFromCheck = true
+            },
+            procMacro = {
+                enable = true
+            },
+        }
+    }
+})
 EOF
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
