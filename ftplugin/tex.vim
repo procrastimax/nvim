@@ -1,5 +1,5 @@
-" use deoplete for vimtex
-call deoplete#custom#var('omni', 'input_patterns', { 'tex': g:vimtex#re#deoplete})
+" LATEX ftplugin
+" NOTE: currently no latex plugin is used
 
 " ---------------
 " AUTO CLOSE BRACKETS
@@ -10,24 +10,16 @@ call deoplete#custom#var('omni', 'input_patterns', { 'tex': g:vimtex#re#deoplete
 "inoremap [ []<left>
 "inoremap { {}<left>
 
-nnoremap <F9> :w<CR>:call SaveCompileView()<CR>
-
-function! SaveCompileView()
-    :w
-    :VimtexCompile
-    :VimtexView
-endfunction
-
-" execute this function when saving with 'W'
-command! W :call SaveCompileView()
-
-function! GetUserInput()
-    let curline = getline('.')
-    call inputsave()
-    let userInput = input('Enter name: ')
-    call inputrestore()
-    call setline('.', curline . ' ' . userInput)
-endfunction
+"nnoremap <F9> :w<CR>:call SaveCompileView()<CR>
+"
+"function! SaveCompileView()
+"    :w
+"    :VimtexCompile
+"    :VimtexView
+"endfunction
+"
+"" execute this function when saving with 'W'
+"command! W :call SaveCompileView()
 
 function! FillEnd()
     let lineNumber = line('.')
@@ -46,6 +38,6 @@ inoremap }<CR> }<ESC>:call FillEnd()<CR>
 " ---------------
 " Latex Snippets
 " ---------------
-" Some code snippet utilitie -> move between <++> tags and replace them, tag before
+" Some code snippet utility -> move between <++> tags and replace them, tag before
 nnoremap tb ?<++><CR>d%i
 inoremap \begin \begin{<++>}<CR><CR>\end{}
