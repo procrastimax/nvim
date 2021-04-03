@@ -7,7 +7,7 @@ filetype plugin indent on
 " disable expanding of comments to new lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o formatoptions+=l
 
-" Set leader key
+" Set leader key to 'SPACE'
 let mapleader = " "
 
 " Security
