@@ -5,14 +5,10 @@
 " keep signcolumn open
 set signcolumn=yes
 
-
 set noexpandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-
-" Folding a class/ method by its matching brackets -> only works when bracket is last character in the line
-nnoremap <Leader>fo $mz%zf'z
 
 " Open horizontal terminal split and compile program there and execute it
 nnoremap <F9> :w <bar> :15split <bar> terminal go run *.go<CR>

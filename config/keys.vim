@@ -10,7 +10,6 @@ nnoremap <C-w><C-w><C-w>l <C-w><
 nnoremap <C-w><C-w><C-w>k <C-w>-
 nnoremap <C-w><C-w><C-w>j <C-w>+
 
-
 "" COPY & PASTE
 " Copy from virtual selection
 vnoremap <Leader>c "+y
@@ -18,7 +17,6 @@ vnoremap <Leader>c "+y
 vnoremap <Leader>x "+x
 " Paste with current clipboard selection
 nnoremap <Leader>v "+p
-
 
 ""  BUFFERS
 " open new empty buffer
@@ -31,7 +29,6 @@ nmap <leader>bp :bprevious<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
 " show all buffers ad their status
 nmap <leader>bl :ls<CR>
-
 
 "" Tabs
 " create new tab layout
@@ -64,3 +61,6 @@ map <leader>l :set list!<CR>
 
 " Open Explore window
 nnoremap <F5> :Explore<CR>
+
+" Folding a class/ method by its matching brackets -> only works when bracket is last character in the line
+nnoremap <Leader>fo $mz%zf'z
