@@ -59,8 +59,13 @@ set listchars=tab:▸\ ,eol:¬,trail::
 " toggle tabs and eol
 map <leader>l :set list!<CR>
 
+" config netrw
+let g:netrw_banner=0 " disable banner
+let g:netrw_liststyle=3 "enable Tree list view
+
 " Open Explore window
 nnoremap <F5> :Explore<CR>
+nnoremap <F17> :20Lexplore<CR>
 
 " Folding a class/ method by its matching brackets -> only works when bracket is last character in the line
 nnoremap <Leader>fo $mz%zf'z
