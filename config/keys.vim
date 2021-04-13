@@ -67,7 +67,7 @@ let g:netrw_liststyle=3
 
 " Open Explore window
 nnoremap <F5> :Explore<CR>
-nnoremap <F17> :20Lexplore<CR>
+nnoremap <F17> :15Lexplore<CR>
 
 " delete empty buffer
 augroup AutoDeleteNetrwHiddenBuffers
