@@ -15,6 +15,9 @@ local on_attach = function(client)
 end
 
 -- Enable gopls
+nvim_lsp.ccls.setup({ on_attach=on_attach })
+
+-- Enable gopls
 nvim_lsp.gopls.setup({ on_attach=on_attach })
 
 -- Enable pyright
@@ -68,3 +71,4 @@ nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>
 " Goto previous/next diagnostic warning/error
 nnoremap <silent> g[ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <Leader>F <cmd>lua vim.lsp.buf.formatting()<CR>
