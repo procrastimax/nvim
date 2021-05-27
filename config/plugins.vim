@@ -25,21 +25,34 @@ if dein#load_state('~/.config/nvim/dein')
     " lsp stuff
     call dein#add('neovim/nvim-lspconfig')
     call dein#add('nvim-lua/lsp_extensions.nvim')
-    call dein#add('nvim-lua/completion-nvim')
+    "call dein#add('nvim-lua/completion-nvim')
+
+    " better code completion
+    call dein#add('hrsh7th/nvim-compe')
+    call dein#add('hrsh7th/vim-vsnip')
+    call dein#add('hrsh7th/vim-vsnip-integ')
+
+    " tree sitter stuff
+    call dein#add('nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'})
+    call dein#add('nvim-treesitter/playground')
+
+
+    " telescope (fzf alternative)
+    " deps
+    call dein#add('nvim-lua/popup.nvim')
+    call dein#add('nvim-lua/plenary.nvim')
+    " telescope
+    call dein#add('nvim-telescope/telescope.nvim')
+
 
     call dein#end()
-call dein#save_state()
+    call dein#save_state()
 endif
 
 " Sking related:
-    " enable list of buffers
-    let g:airline#extensions#tabline#enabled = 1
-    " only show filename of buffers
-    let g:airline#extensions#tabline#fnamemod = ':t'
-    let g:airline_powerline_fonts = 1
-    let g:airline_theme = 'zenburn'
-
-" vim-go configuration
-    let g:go_fmt_command = "goimports"
-    let g:go_def_mode='gopls'
-    let g:go_info_mode='gopls'
+" enable list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" only show filename of buffers
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'zenburn'

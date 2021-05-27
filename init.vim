@@ -1,6 +1,7 @@
 source $HOME/.config/nvim/config/plugins.vim
 source $HOME/.config/nvim/config/general.vim
 source $HOME/.config/nvim/config/keys.vim
+source $HOME/.config/nvim/config/completion.vim
 
 " Configure LSP
 " https://github.com/neovim/nvim-lspconfig#rust_analyzer
@@ -10,22 +11,35 @@ lua <<EOF
 local nvim_lsp = require'lspconfig'
 
 -- function to attach completion when setting up lsp
-local on_attach = function(client)
-    require'completion'.on_attach(client)
-end
+-- local on_attach = function(client)
+--    require'completion'.on_attach(client)
+-- end
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = {
+    'documentation',
+    'detail',
+    'additionalTextEdits',
+  }
+}
+
+-- Enable ccls
+nvim_lsp.ccls.setup({capabilities = capabilities})
 
 -- Enable gopls
-nvim_lsp.ccls.setup({ on_attach=on_attach })
-
--- Enable gopls
-nvim_lsp.gopls.setup({ on_attach=on_attach })
+nvim_lsp.gopls.setup({capabilities = capabilities})
 
 -- Enable pyright
-nvim_lsp.pyright.setup({ on_attach=on_attach })
+nvim_lsp.pyright.setup({capabilities = capabilities})
+
+-- Enable bash LSP
+nvim_lsp.bashls.setup({capabilities = capabilities})
 
 -- Enable rust_analyzer
 nvim_lsp.rust_analyzer.setup({
-    on_attach=on_attach,
+    capabilities = capabilities,
     settings = {
         ["rust-analyzer"] = {
             assist = {
@@ -43,17 +57,7 @@ nvim_lsp.rust_analyzer.setup({
 })
 EOF
 
-" Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-set completeopt=menuone,noinsert,noselect
-" Avoid showing message extra message when using completion
-set shortmess+=
-
 let g:completion_enable_auto_popup = 1
-imap <tab> <Plug>(completion_smart_tab)
-imap <s-tab> <Plug>(completion_smart_s_tab)
 
 nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
