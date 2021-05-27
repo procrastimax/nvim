@@ -30,7 +30,6 @@ if dein#load_state('~/.config/nvim/dein')
     " better code completion
     call dein#add('hrsh7th/nvim-compe')
     call dein#add('hrsh7th/vim-vsnip')
-    call dein#add('hrsh7th/vim-vsnip-integ')
 
     " tree sitter stuff
     call dein#add('nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'})
