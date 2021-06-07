@@ -79,6 +79,6 @@ augroup end
 nnoremap <Leader>fo $mz%zf'z
 
 " Telescope Keys
-nnoremap <Leader>ff <CMD>Telescope find_files<CR>
+nnoremap <Leader>fd <CMD>Telescope fd<CR>
 nnoremap <Leader>fg <CMD>Telescope grep_string<CR>
 nnoremap <Leader>fgc <CMD>Telescope git_commits<CR>
