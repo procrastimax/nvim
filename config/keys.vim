@@ -77,3 +77,8 @@ augroup end
 
 " Folding a class/ method by its matching brackets -> only works when bracket is last character in the line
 nnoremap <Leader>fo $mz%zf'z
+
+" Telescope Keys
+nnoremap <Leader>ff <CMD>Telescope find_files<CR>
+nnoremap <Leader>fg <CMD>Telescope grep_string<CR>
+nnoremap <Leader>fgc <CMD>Telescope git_commits<CR>
