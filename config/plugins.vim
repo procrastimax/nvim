@@ -25,7 +25,6 @@ if dein#load_state('~/.config/nvim/dein')
     " lsp stuff
     call dein#add('neovim/nvim-lspconfig')
     call dein#add('nvim-lua/lsp_extensions.nvim')
-    "call dein#add('nvim-lua/completion-nvim')
 
     " better code completion
     call dein#add('hrsh7th/nvim-compe')
@@ -34,6 +33,9 @@ if dein#load_state('~/.config/nvim/dein')
     " tree sitter stuff
     call dein#add('nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'})
     call dein#add('nvim-treesitter/playground')
+
+    " latex
+    call dein#add('lervag/vimtex')
 
 
     " telescope (fzf alternative)

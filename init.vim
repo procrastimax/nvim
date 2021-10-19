@@ -55,6 +55,10 @@ nvim_lsp.rust_analyzer.setup({
         }
     }
 })
+
+-- Enable latex language server (TexLab)
+nvim_lsp.texlab.setup({capabilities = capabilities})
+
 EOF
 
 let g:completion_enable_auto_popup = 1
