@@ -57,3 +57,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'zenburn'
+
+let g:tex_flavor = "latex"
+let g:vimtex_view_general_viewer = "evince"
