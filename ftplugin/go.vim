@@ -11,7 +11,7 @@ set softtabstop=4
 set tabstop=4
 
 " Open horizontal terminal split and compile program there and execute it
-nnoremap <F9> :w <bar> :15split <bar> terminal go run *.go<CR>
+nnoremap <F9> :w<bar>:GoRun<CR>
 
 " ---------------
 " AUTO CLOSE BRACKETS
