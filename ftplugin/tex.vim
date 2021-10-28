@@ -18,6 +18,12 @@ function! SaveCompileView()
     :VimtexView
 endfunction
 
+" close quickfix (error) window after moving cursor
+let g:vimtex_quickfix_autoclose_after_keystrokes = 0
+
+" open quickfix window on warnings
+let g:vimtex_quickfix_open_on_warning = 0
+
 "" execute this function when saving with 'W'
 command! W :call SaveCompileView()
 
