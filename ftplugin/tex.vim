@@ -1,16 +1,4 @@
 " LATEX ftplugin
-" NOTE: currently no latex plugin is used
-
-" ---------------
-" AUTO CLOSE BRACKETS
-" ---------------
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap { {}<left>
-
-nnoremap <F9> :w<CR>:call SaveCompileView()<CR>
 
 function! SaveCompileView()
     :w
@@ -18,34 +6,23 @@ function! SaveCompileView()
     :VimtexView
 endfunction
 
+nnoremap <F9> :w<CR>:call SaveCompileView()<CR>
 
 "" execute this function when saving with 'W'
 command! W :call SaveCompileView()
-
-
 let g:vimtex_quickfix_mode = 2
 " close quickfix (error) window after moving cursor
 let g:vimtex_quickfix_autoclose_after_keystrokes = 1
 " open quickfix window on warnings
 let g:vimtex_quickfix_open_on_warning = 0
 
-"function! FillEnd()
-"    let lineNumber = line('.')
-"    let fullLine = matchstr(getline(lineNumber) , '\\\w\+{\w\+}')
-"    if fullLine == ''
-"        echo \"doesnt match\"
-"        return
-"    endif
-"    let bracketName = split(fullLine, '{')[1]
-"    call setline(lineNumber + 1, '\end{' . bracketName[0:strlen(bracketName)-2] . '}')
-"endfunction
 
-" when leaving a line with \...{} then create a end for it
-"inoremap }<CR> }<ESC>:call FillEnd()<CR>
+" insert math arrows
+nnoremap <leader>rarr i$\rightarrow$<ESC>
+nnoremap <leader>larr i$\leftarrow$<ESC>
+nnoremap <leader>lrarr i$\leftrightarrow$<ESC>
 
-" ---------------
-" Latex Snippets
-" ---------------
-" Some code snippet utility -> move between <++> tags and replace them, tag before
-"nnoremap tb ?<++><CR>d%i
-"inoremap \begin \begin{<++>}<CR><CR>\end{}
+nnoremap <leader>bf i\textbf{}<ESC>i
+nnoremap <leader>it i\textit{}<ESC>i
+nnoremap <leader>quot i\enquote{}<ESC>i
+nnoremap <leader>fig i\begin{figure}[h]<ESC>o\centering<ESC>o\includegraphics[width=\textwidth]{}<ESC>o\caption{Figure}<ESC>o\label{fig:}<ESC>o<BACKSPACE>\end{figure}<ESC>
