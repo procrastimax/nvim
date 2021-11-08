@@ -18,13 +18,13 @@ let g:vimtex_quickfix_open_on_warning = 0
 
 
 " insert math arrows
-nnoremap <leader>rarr i$\rightarrow$<ESC>
-nnoremap <leader>larr i$\leftarrow$<ESC>
-nnoremap <leader>lrarr i$\leftrightarrow$<ESC>
+nnoremap <leader>rarr a$\rightarrow$<ESC>
+nnoremap <leader>larr a$\leftarrow$<ESC>
+nnoremap <leader>lrarr a$\leftrightarrow$<ESC>
 
-nnoremap <leader>bf i\textbf{}<ESC>i
-nnoremap <leader>it i\textit{}<ESC>i
-nnoremap <leader>quot i\enquote{}<ESC>i
+nnoremap <leader>bf a\textbf{}<ESC>i
+nnoremap <leader>it a\textit{}<ESC>i
+nnoremap <leader>quot a\enquote{}<ESC>i
 
 nnoremap <leader>list i\begin{itemize}<ESC>o\item<ESC>o<BACKSPACE><BACKSPACE>\end{itemize}<ESC>
 nnoremap <leader>enum i\begin{enumerate}<ESC>o\item<ESC>o<BACKSPACE><BACKSPACE>\end{enumerate}<ESC>
