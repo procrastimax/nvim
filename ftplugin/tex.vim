@@ -25,4 +25,8 @@ nnoremap <leader>lrarr i$\leftrightarrow$<ESC>
 nnoremap <leader>bf i\textbf{}<ESC>i
 nnoremap <leader>it i\textit{}<ESC>i
 nnoremap <leader>quot i\enquote{}<ESC>i
+
+nnoremap <leader>list i\begin{itemize}<ESC>o\item<ESC>o<BACKSPACE><BACKSPACE>\end{itemize}<ESC>
+nnoremap <leader>enum i\begin{enumerate}<ESC>o\item<ESC>o<BACKSPACE><BACKSPACE>\end{enumerate}<ESC>
+
 nnoremap <leader>fig i\begin{figure}[h]<ESC>o\centering<ESC>o\includegraphics[width=\textwidth]{}<ESC>o\caption{Figure}<ESC>o\label{fig:}<ESC>o<BACKSPACE>\end{figure}<ESC>
