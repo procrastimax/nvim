@@ -24,6 +24,7 @@ nnoremap <leader>lrarr a$\leftrightarrow$<ESC>
 
 nnoremap <leader>bf a\textbf{}<ESC>i
 nnoremap <leader>it a\textit{}<ESC>i
+nnoremap <leader>ul a\underline{}<ESC>i
 nnoremap <leader>quot a\enquote{}<ESC>i
 
 nnoremap <leader>list i\begin{itemize}<ESC>o\item<ESC>o<BACKSPACE><BACKSPACE>\end{itemize}<ESC>
