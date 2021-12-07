@@ -13,9 +13,9 @@ Clone this repository into **$HOME/.config**.
 The setup consists of a main *init.vim* which has only one purpose - load other vim config files.
 Language specific configs are loaded from the ftplugin folder with the structure: *language*.vim.
 
-After this, call the *dein_install.sh* script in the *dein* folder, this is going to download and install the dein plugin manager.
-Then exectute `:call dein#install()` in nvim to download all plugins.
+To setup the plugin manager `dein` and other things, please execute the `install.sh` script.
+After this, open neovim an type: `:call dein#install()` in nvim to download all plugins.
 
 ## Needed Programs
-- [NeoVim](https://github.com/neovim/neovim) (nightly build min. v0.5)
+- [NeoVim](https://github.com/neovim/neovim) (nightly build min. **v0.5**)
 - Python3
