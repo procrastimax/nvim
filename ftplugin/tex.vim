@@ -16,6 +16,9 @@ let g:vimtex_quickfix_autoclose_after_keystrokes = 1
 " open quickfix window on warnings
 let g:vimtex_quickfix_open_on_warning = 0
 
+" keep signcolumn open
+set signcolumn=yes
+
 
 " insert math arrows
 nnoremap <leader>rarr a$\rightarrow$<ESC>
