@@ -10,11 +10,6 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 
-" folding with treesitter
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
-
-
 " Open horizontal terminal split and compile program there and execute it
 nnoremap <F9> :w<bar>:GoRun<CR>
 
