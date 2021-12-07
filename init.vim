@@ -100,5 +100,3 @@ nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> g[ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <Leader>F <cmd>lua vim.lsp.buf.formatting()<CR>
-
-source $HOME/.config/nvim/config/last.vim
