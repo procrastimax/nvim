@@ -19,6 +19,10 @@ let g:vimtex_quickfix_open_on_warning = 0
 " keep signcolumn open
 set signcolumn=yes
 
+" folding with treesitter
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
 
 " insert math arrows
 nnoremap <leader>rarr a$\rightarrow$<ESC>
