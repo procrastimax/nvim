@@ -32,6 +32,7 @@ nnoremap <leader>lrarr a$\leftrightarrow$<ESC>
 
 nnoremap <leader>bf a\textbf{}<ESC>i
 nnoremap <leader>it a\textit{}<ESC>i
+nnoremap <leader>ttt a\texttt{}<ESC>i
 nnoremap <leader>ul a\underline{}<ESC>i
 nnoremap <leader>quot a\enquote{}<ESC>i
 
