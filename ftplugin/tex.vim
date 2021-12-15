@@ -30,6 +30,10 @@ nnoremap <leader>rarr a$\rightarrow$<ESC>
 nnoremap <leader>larr a$\leftarrow$<ESC>
 nnoremap <leader>lrarr a$\leftrightarrow$<ESC>
 
+nnoremap <leader>Rarr a$\Rightarrow$<ESC>
+nnoremap <leader>Larr a$\Leftarrow$<ESC>
+nnoremap <leader>Lrarr a$\Leftrightarrow$<ESC>
+
 nnoremap <leader>bf a\textbf{}<ESC>i
 nnoremap <leader>it a\textit{}<ESC>i
 nnoremap <leader>ttt a\texttt{}<ESC>i
