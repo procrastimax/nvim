@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-echo "Updating the following language servers:"
+echo "Updating the following language servers with npm:"
 echo "\t-pyright (Python)"
 echo "\t-bash-language-server (Bash)"
 
