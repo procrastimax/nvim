@@ -27,6 +27,8 @@ nmap <leader>bn :bnext<CR>
 nmap <leader>bp :bprevious<CR>
 " close a current buffer and move to rpevious
 nmap <leader>bq :bp <BAR> bd #<CR>
+" just close current buffer
+nmap <leader>bd :bd<CR>
 " show all buffers ad their status
 nmap <leader>bl :ls<CR>
 
