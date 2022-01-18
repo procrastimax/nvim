@@ -47,3 +47,4 @@ nnoremap <leader>list i\begin{itemize}<ESC>o\item<ESC>o<BACKSPACE><BACKSPACE>\en
 nnoremap <leader>enum i\begin{enumerate}<ESC>o\item<ESC>o<BACKSPACE><BACKSPACE>\end{enumerate}<ESC>
 
 nnoremap <leader>fig i\begin{figure}[h]<ESC>o\centering<ESC>o\includegraphics[width=\textwidth]{}<ESC>o\caption{Figure}<ESC>o\label{fig:}<ESC>o<BACKSPACE>\end{figure}<ESC>
+nnoremap <leader>tab i\begin{table}[h]<ESC>o\centering<ESC>o\begin{tabular}{}<ESC>o\end{tabular}<ESC>o\caption{Figure}<ESC>o\label{tab:}<ESC>o<BACKSPACE>\end{table}<ESC>
