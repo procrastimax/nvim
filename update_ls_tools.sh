@@ -7,9 +7,8 @@ echo "\t-bash-language-server (Bash)"
 read -p "Proceed [y/n]? " ANSWER
 
 if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
-    sudo npm i -g npm
-    sudo npm i -g pyright
-    sudo npm i -g bash-language-server
+    sudo npm install -g pyright
+    sudo npm install -g bash-language-server
 else
     echo "Quitting..."
 fi
