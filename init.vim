@@ -61,7 +61,7 @@ nvim_lsp.texlab.setup({capabilities = capabilities})
 
 -- Enable tree sitter support
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"rust","python","go","bash","html","css","markdown","latex","c","make","java","lua","json","vim","bibtex","yaml","javascript","kotlin","dockerfile"},
+  ensure_installed = {"rust","python","go","bash","html","css","markdown","latex","c","make","java","lua","json","vim","bibtex","yaml","javascript","kotlin","dockerfile","toml"},
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   highlight = {
     enable = true,              -- false will disable the whole extension

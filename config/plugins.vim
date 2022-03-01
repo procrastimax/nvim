@@ -19,9 +19,6 @@ if dein#load_state('~/.config/nvim/dein')
     " go plugin
     call dein#add('fatih/vim-go')
 
-    " toml files
-    call dein#add('cespare/vim-toml')
-
     " lsp stuff
     call dein#add('neovim/nvim-lspconfig')
     call dein#add('nvim-lua/lsp_extensions.nvim')
