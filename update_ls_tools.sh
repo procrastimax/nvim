@@ -16,6 +16,7 @@ if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     echo "Installing bash-language-server"
     sudo npm install -g bash-language-server
 
+    rustup update
     # rust-analyzer
     echo "Installing rust-analyzer"
     mkdir -p ~/.local/bin
