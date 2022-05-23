@@ -26,7 +26,7 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 }
 
 -- Enable ccls
-nvim_lsp.ccls.setup({capabilities = capabilities})
+nvim_lsp.clangd.setup({capabilities = capabilities})
 
 -- Enable gopls
 nvim_lsp.gopls.setup({capabilities = capabilities})
