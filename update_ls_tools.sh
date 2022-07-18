@@ -10,11 +10,11 @@ read -p "Proceed [y/n]? " ANSWER
 if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     # pyright
     echo "Installing pyright"
-    sudo npm install -g pyright
+    sudo npm install --location=global pyright
 
     # bashl
     echo "Installing bash-language-server"
-    sudo npm install -g bash-language-server
+    sudo npm install --location=global bash-language-server
 
     rustup update
     # rust-analyzer
