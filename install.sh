@@ -1,22 +1,22 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 
 echo "This script is going to setup the following things:"
-echo "\t- dein neovim plugin manager"
-echo "\t- powerline fonts"
+echo "    - dein neovim plugin manager"
+echo "    - powerline fonts"
 
-read -p "Setup neovim config [y/n]? " ANSWER
+read -r -p "Setup neovim config [y/n]? " ANSWER
 
 if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     # Installing dein
-    cd dein
+    cd dein || exit 1
     curl --proto "https" --tlsv1.3 https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
     sh ./installer.sh ~/.config/nvim/dein
     rm installer.sh
 
-    cd
+    cd || exit
     # Installing powerline fonts
     git clone https://github.com/powerline/fonts.git --depth=1
-    cd fonts
+    cd fonts || exit 1
     ./install.sh
     cd ..
     rm -rf fonts
