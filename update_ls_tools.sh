@@ -1,11 +1,10 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 
 echo "Updating the following language servers:"
-echo "\t-pyright (Python)"
-echo "\t-bash-language-server (Bash)"
-echo "\t-rust-analyzer (Rust)"
+echo "    -pyright (Python)"
+echo "    -bash-language-server (Bash)"
 
-read -p "Proceed [y/n]? " ANSWER
+read -r -p "Proceed [y/n]? " ANSWER
 
 if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     # pyright
@@ -16,12 +15,6 @@ if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     echo "Installing bash-language-server"
     sudo npm install --location=global bash-language-server
 
-    rustup update
-    # rust-analyzer
-    echo "Installing rust-analyzer"
-    mkdir -p ~/.local/bin
-    curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
-    chmod +x ~/.local/bin/rust-analyzer
 else
     echo "Quitting..."
 fi
