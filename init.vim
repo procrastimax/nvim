@@ -37,6 +37,9 @@ nvim_lsp.pyright.setup({capabilities = capabilities})
 -- Enable bash LSP
 nvim_lsp.bashls.setup({capabilities = capabilities})
 
+-- Enable lua LSP
+nvim_lsp.sumneko_lua.setup({capabilities = capabilities})
+
 -- Enable rust_analyzer
 nvim_lsp.rust_analyzer.setup({
     capabilities = capabilities,
