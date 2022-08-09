@@ -22,7 +22,7 @@ set ruler
 set termguicolors
 
 " set colorscheme
-colorscheme srcery
+colorscheme nord
 
 set encoding=utf-8
 
