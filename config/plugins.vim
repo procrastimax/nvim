@@ -58,3 +58,5 @@ let g:airline_theme = 'zenburn'
 
 let g:tex_flavor = "latex"
 let g:vimtex_view_general_viewer = "evince"
+
+let g:python3_host_prog = '$HOME/.pyenv/versions/py3nvim/bin/python'
