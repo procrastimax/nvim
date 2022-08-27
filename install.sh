@@ -30,6 +30,7 @@ if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
         pyenv install 3.10.6
         pyenv virtualenv 3.10.6 py3nvim
         pyenv shell py3nvim
+        pyenv exec pip install wheel
         pyenv exec pip install pynvim
     fi
 else
