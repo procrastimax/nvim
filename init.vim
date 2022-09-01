@@ -25,9 +25,6 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
   }
 }
 
--- Enable ccls
-nvim_lsp.clangd.setup({capabilities = capabilities})
-
 -- Enable gopls
 nvim_lsp.gopls.setup({capabilities = capabilities})
 
@@ -61,6 +58,16 @@ nvim_lsp.rust_analyzer.setup({
 
 -- Enable latex language server (TexLab)
 nvim_lsp.texlab.setup({capabilities = capabilities})
+
+
+-- Enable css language server
+nvim_lsp.cssls.setup({capabilities = capabilities})
+
+-- Enable json language server
+nvim_lsp.jsonls.setup({capabilities = capabilities})
+
+-- Enable json language server
+nvim_lsp.html.setup({capabilities = capabilities})
 
 -- Enable tree sitter support
 require'nvim-treesitter.configs'.setup {
