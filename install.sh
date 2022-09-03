@@ -8,7 +8,9 @@ read -r -p "Setup neovim config [y/n]? " ANSWER
 
 if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     # Installing dein
-    cd dein || exit 1
+    ABS_PATH="$(dirname "$(realpath "$0")")"
+
+    cd "$ABS_PATH/dein" || exit 1
     curl --proto "https" --tlsv1.3 https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
     sh ./installer.sh ~/.config/nvim/dein
     rm installer.sh
