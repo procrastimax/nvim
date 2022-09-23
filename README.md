@@ -1,6 +1,6 @@
 # NeoVim Configuration
 This is my simple neovim nightly config setup with support for the following native LSP:
-- Go (gopls) - can be installed with the 'vim-go' plugin with `:GoInstallBinaries`
+- Go (gopls)
 - Python ([pyright](https://github.com/Microsoft/pyright))
 - Rust ([rust-analyzer](https://rust-analyzer.github.io/manual.html#installation)).
 - Bash ([bash-language-server](https://github.com/bash-lsp/bash-language-server)).

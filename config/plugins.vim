@@ -17,9 +17,6 @@ if dein#load_state('~/.config/nvim/dein')
     call dein#add('vim-airline/vim-airline')
     call dein#add('vim-airline/vim-airline-themes')
 
-    " go plugin
-    call dein#add('fatih/vim-go')
-
     " lsp stuff
     call dein#add('neovim/nvim-lspconfig')
     call dein#add('nvim-lua/lsp_extensions.nvim')
