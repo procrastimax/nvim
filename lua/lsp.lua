@@ -87,11 +87,8 @@ require 'nvim-treesitter.configs'.setup {
         -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
         additional_vim_regex_highlighting = false,
     },
-    indentation = {
+    indent = {
         enable = true, -- Indentation based on treesitter for the = operator. NOTE: This is an experimental feature.
-    },
-    folding = {
-        enable = true,
     },
     incremental_selection = {
         enable = true,
