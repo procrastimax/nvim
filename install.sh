@@ -10,12 +10,8 @@ if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     # Installing dein
     ABS_PATH="$(dirname "$(realpath "$0")")"
 
-    cd "$ABS_PATH/dein" || exit 1
-    curl --proto "https" --tlsv1.3 https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-    sh ./installer.sh ~/.config/nvim/dein
-    rm installer.sh
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-    cd || exit
     # Installing powerline fonts
     git clone https://github.com/powerline/fonts.git --depth=1
     cd fonts || exit 1
