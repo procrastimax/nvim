@@ -17,5 +17,5 @@ To setup the plugin manager `dein` and other things, please execute the `install
 After this, open neovim an type: `:call dein#install()` in nvim to download all plugins.
 
 ## Needed Programs
-- [NeoVim](https://github.com/neovim/neovim) (nightly build min. **v0.5**)
+- [NeoVim](https://github.com/neovim/neovim) (version min. **v0.72**)
 - Python3
