@@ -7,6 +7,9 @@ vim.g["tex_flavor"] = "latex"
 vim.g["vimtex_view_general_viewer"] = "evince"
 vim.g["python3_host_prog"] = '$HOME/.pyenv/versions/py3nvim/bin/python'
 
+vim.wo["foldmethod"] = "expr"
+vim.wo["foldexpr"] = "nvim_treesitter#foldexpr()"
+
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
@@ -36,4 +39,3 @@ return require('packer').startup(function(use)
     -- treesitter
     use 'nvim-treesitter/nvim-treesitter'
 end)
-
