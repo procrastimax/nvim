@@ -27,11 +27,13 @@ return require('packer').startup(function(use)
     use 'rafamadriz/friendly-snippets'
 
     -- colorscheme
-    use 'arcticicestudio/nord-vim'
+    use 'shaunsingh/nord.nvim'
 
-    -- airline status bar
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
+    -- lualine
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
     -- vimtex
     use 'lervag/vimtex'

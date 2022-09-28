@@ -109,10 +109,15 @@ _G.packer_plugins = {
     path = "/home/max/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["nord-vim"] = {
+  ["lualine.nvim"] = {
     loaded = true,
-    path = "/home/max/.local/share/nvim/site/pack/packer/start/nord-vim",
-    url = "https://github.com/arcticicestudio/nord-vim"
+    path = "/home/max/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/home/max/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -129,20 +134,16 @@ _G.packer_plugins = {
     path = "/home/max/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/max/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/max/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "/home/max/.local/share/nvim/site/pack/packer/start/vim-airline",
-    url = "https://github.com/vim-airline/vim-airline"
-  },
-  ["vim-airline-themes"] = {
-    loaded = true,
-    path = "/home/max/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
-    url = "https://github.com/vim-airline/vim-airline-themes"
   },
   vimtex = {
     loaded = true,
