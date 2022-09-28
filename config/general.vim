@@ -3,7 +3,6 @@ syntax on
 
 " For Plugins to load correctly
 filetype plugin indent on
-
 " disable expanding of comments to new lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o formatoptions+=l
 
@@ -73,7 +72,6 @@ autocmd BufWritePre * %s/\s\+$//e
 set scrolloff=3
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
-runtime! marcos/matchit.vim
 
 " Allow hidden buffers
 set hidden
@@ -102,3 +100,7 @@ set smartcase
 
 " show matching brackets
 set showmatch
+
+" when entering a new buffer always reload it (only buffers with *.* name - so all files with an ending)
+" this reapplies treesitter and fixes a bug where I had to reload it on my own
+autocmd BufEnter *.* edit
