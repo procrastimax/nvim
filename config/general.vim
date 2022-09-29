@@ -103,4 +103,4 @@ set showmatch
 
 " when entering a new buffer always reload it (only buffers with *.* name - so all files with an ending)
 " this reapplies treesitter and fixes a bug where I had to reload it on my own
-autocmd BufEnter *.* edit
+"autocmd BufEnter *.* edit
