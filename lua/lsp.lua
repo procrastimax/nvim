@@ -77,29 +77,10 @@ vim.api.nvim_create_autocmd('User', {
     end
 })
 
--- Enable tree sitter support
-require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { "rust", "python", "go", "bash", "html", "css", "markdown", "latex", "c", "make", "java", "lua",
-        "json", "vim", "bibtex", "yaml", "javascript", "kotlin", "dockerfile", "toml", "ruby", "comment" },
-    sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
-    highlight = {
-        enable = true, -- false will disable the whole extension
-        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-        additional_vim_regex_highlighting = false,
-    },
-    indent = {
-        enable = true, -- Indentation based on treesitter for the = operator. NOTE: This is an experimental feature.
-    },
-    incremental_selection = {
-        enable = true,
-        keymaps = {
-            init_selection = "gnn",
-            node_incremental = "grn",
-            scope_incremental = "grc",
-            node_decremental = "grm",
-        },
-    },
-}
+
+vim.opt.completeopt = { 'menuone', 'noselect', 'noinsert' }
+vim.opt.shortmess = vim.opt.shortmess + { c = true }
+vim.api.nvim_set_option('updatetime', 300)
 
 --vim.wo["foldlevel"] = 20
 --vim.wo["foldmethod"] = "manual"
@@ -138,3 +119,29 @@ lspconfig.texlab.setup({})
 lspconfig.cssls.setup({})
 lspconfig.jsonls.setup({})
 lspconfig.html.setup({})
+
+-- Enable tree sitter support
+require 'nvim-treesitter.configs'.setup {
+    ensure_installed = { "rust", "python", "go", "bash", "html", "css", "markdown", "latex", "c", "make", "java", "lua",
+        "json", "vim", "bibtex", "yaml", "javascript", "kotlin", "dockerfile", "toml", "ruby", "comment" },
+    sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
+    highlight = {
+        enable = true, -- false will disable the whole extension
+        additional_vim_regex_highlighting = false,
+    },
+    indent = {
+        enable = true, -- Indentation based on treesitter for the = operator. NOTE: This is an experimental feature.
+    },
+    incremental_selection = {
+        enable = true,
+        keymaps = {
+            init_selection = "gnn",
+            node_incremental = "grn",
+            scope_incremental = "grc",
+            node_decremental = "grm",
+        },
+    },
+}
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

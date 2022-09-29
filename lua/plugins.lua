@@ -10,13 +10,18 @@ vim.g["python3_host_prog"] = '$HOME/.pyenv/versions/py3nvim/bin/python'
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 
+    use 'hrsh7th/nvim-cmp'
+
     use 'hrsh7th/cmp-nvim-lsp'
+
     use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
+    use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/nvim-cmp'
 
     -- lua snippets
     use 'L3MON4D3/LuaSnip'
