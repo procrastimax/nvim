@@ -113,12 +113,16 @@ lspconfig.sumneko_lua.setup({})
 lspconfig.rust_analyzer.setup({
     settings = {
         ["rust-analyzer"] = {
-            assist = {
-                importMergeBehavior = "last",
-                importPrefix = "by_self",
+            imports = {
+                granularity = {
+                    group = "module",
+                },
+                prefix = "self",
             },
             cargo = {
-                loadOutDirsFromCheck = true
+                buildScripts = {
+                    enable = true,
+                },
             },
             procMacro = {
                 enable = true
