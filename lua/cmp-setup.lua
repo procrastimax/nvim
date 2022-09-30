@@ -88,8 +88,9 @@ cmp.setup({
         { name = 'nvim_lsp', keyword_length = 3 },
         { name = 'nvim_lsp_signature_help' },
         { name = 'nvim_lua', keyword_length = 2 },
-        { name = 'buffer', keyword_length = 2, option = { keyword_pattern = [[\k\+]] } },
+        { name = 'buffer', option = { keyword_pattern = [[\k\+]] } },
         { name = 'luasnip', keyword_length = 2 },
+        { name = 'cmdline' },
     }),
 
     formatting = {
@@ -110,8 +111,6 @@ cmp.setup({
 -- Set configuration for specific filetype.
 cmp.setup.filetype('gitcommit', {
     sources = cmp.config.sources({
-        { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
-    }, {
         { name = 'buffer' },
     })
 })
@@ -119,9 +118,11 @@ cmp.setup.filetype('gitcommit', {
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline(),
-    sources = {
+    sources = cmp.config.sources({
+        { name = 'nvim_lsp_document_symbol' }
+    }, {
         { name = 'buffer' }
-    }
+    })
 })
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).

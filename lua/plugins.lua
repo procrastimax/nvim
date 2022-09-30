@@ -19,9 +19,13 @@ return require('packer').startup(function(use)
 
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-nvim-lsp-signature-help'
+    use 'hrsh7th/cmp-nvim-lsp-document-symbol'
     use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
+
+    -- extra completion sources
+    use 'hrsh7th/cmp-omni'
 
     -- lua snippets
     use 'L3MON4D3/LuaSnip'

@@ -79,12 +79,8 @@ vim.api.nvim_create_autocmd('User', {
 
 
 vim.opt.completeopt = { 'menuone', 'noselect', 'noinsert' }
-vim.opt.shortmess = vim.opt.shortmess + { c = true }
+--vim.opt.shortmess = vim.opt.shortmess + { c = true }
 vim.api.nvim_set_option('updatetime', 300)
-
---vim.wo["foldlevel"] = 20
---vim.wo["foldmethod"] = "manual"
---vim.wo["foldexpr"] = "nvim_treesitter#foldexpr()"
 
 ---
 -- LSP Servers
