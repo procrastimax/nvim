@@ -73,7 +73,7 @@ vim.api.nvim_create_autocmd('User', {
         bufmap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
 
         -- format
-        bufmap('n', '<space>F', '<cmd>lua vim.lsp.buf.formatting()<cr>')
+        bufmap('n', '<space>F', '<cmd>lua vim.lsp.buf.format { async = true }<cr>')
     end
 })
 
