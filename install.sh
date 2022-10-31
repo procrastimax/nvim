@@ -7,9 +7,6 @@ echo "    - powerline fonts"
 read -r -p "Setup neovim config [y/n]? " ANSWER
 
 if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
-    # Installing dein
-    ABS_PATH="$(dirname "$(realpath "$0")")"
-
     git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
     # Installing powerline fonts
@@ -25,8 +22,8 @@ if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
         eval "$(pyenv init -)"
         eval "$(pyenv virtualenv-init -)"
 
-        pyenv install 3.10.6
-        pyenv virtualenv 3.10.6 py3nvim
+        pyenv install 3.11.0
+        pyenv virtualenv 3.11.0 py3nvim
         pyenv shell py3nvim
         pyenv exec pip install wheel
         pyenv exec pip install pynvim
