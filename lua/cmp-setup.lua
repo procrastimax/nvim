@@ -90,7 +90,6 @@ cmp.setup({
         { name = 'nvim_lua', keyword_length = 2 },
         { name = 'buffer', option = { keyword_pattern = [[\k\+]] } },
         { name = 'luasnip', keyword_length = 2 },
-        { name = 'cmdline' },
     }),
 
     formatting = {
