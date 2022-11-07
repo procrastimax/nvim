@@ -20,6 +20,9 @@ if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     echo "Installing vscode-langservers-extracted"
     sudo npm install --location=global vscode-langservers-extracted
 
+    echo "Updating rust-tools"
+    rustup update
+
 else
     echo "Quitting..."
 fi
