@@ -111,7 +111,20 @@ lspconfig.rust_analyzer.setup({
 lspconfig.gopls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.bashls.setup({})
-lspconfig.texlab.setup({})
+lspconfig.texlab.setup({
+    settings = {
+        ["texlab"] = {
+            build = {
+                onSave = true,
+                forwardSearchAfter = true,
+            },
+            forwardSearch = {
+                executable = "okular",
+                args = {"--noraise", "--unique", "file:%p#src:%l%f"},
+            }
+        },
+    }
+})
 lspconfig.cssls.setup({})
 lspconfig.jsonls.setup({})
 lspconfig.html.setup({})
