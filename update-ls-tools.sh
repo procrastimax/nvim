@@ -9,8 +9,8 @@ read -r -p "Proceed [y/n]? " ANSWER
 
 if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     # pyright
-    echo "Installing pyright"
-    sudo npm install --location=global pyright
+    echo "Installing pylsp"
+    pip install --upgrade "python-lsp-server[rope,pyflakes,mccabe,pycodestyle,pydocstyle,autopep8,yapf]"
 
     # bashl
     echo "Installing bash-language-server"
