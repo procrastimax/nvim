@@ -3,8 +3,6 @@ vim.g["airline#extensions#tabline#fnamemod"] = ':t'
 vim.g["airline_powerline_fonts"] = 1
 vim.g["airline_theme"] = 'nord'
 
--- vim.g["tex_flavor"] = "latex"
--- vim.g["vimtex_view_general_viewer"] = "evince"
 vim.g["python3_host_prog"] = '$HOME/.pyenv/versions/py3nvim/bin/python'
 
 return require('packer').startup(function(use)
@@ -40,9 +38,6 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-
-    -- vimtex
-    --use 'lervag/vimtex'
 
     -- treesitter
     use 'nvim-treesitter/nvim-treesitter'

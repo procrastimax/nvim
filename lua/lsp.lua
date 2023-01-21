@@ -120,7 +120,7 @@ lspconfig.texlab.setup({
             },
             forwardSearch = {
                 executable = "okular",
-                args = {"--noraise", "--unique", "file:%p#src:%l%f"},
+                args = { "--noraise", "--unique", "file:%p#src:%l%f" },
             }
         },
     }
