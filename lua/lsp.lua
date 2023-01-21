@@ -117,7 +117,7 @@ lspconfig.rust_analyzer.setup({
 })
 
 lspconfig.gopls.setup({})
-lspconfig.pyright.setup({})
+-- lspconfig.pyright.setup({})
 lspconfig.bashls.setup({})
 lspconfig.texlab.setup({
     settings = {
@@ -136,6 +136,22 @@ lspconfig.texlab.setup({
 lspconfig.cssls.setup({})
 lspconfig.jsonls.setup({})
 lspconfig.html.setup({})
+
+lspconfig.pylsp.setup({
+    settings = {
+        pylsp = {
+            plugins = {
+                pycodestyle = {
+                    maxLineLength = 100
+                },
+                pydocstyle = {
+                    enabled = true,
+                    ignore = { "D103", "D100" },
+                },
+            }
+        }
+    }
+})
 
 -- Enable tree sitter support
 require 'nvim-treesitter.configs'.setup {
@@ -162,3 +178,5 @@ require 'nvim-treesitter.configs'.setup {
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+vim.lsp.set_log_level("debug")
