@@ -21,7 +21,11 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
 
+    -- fancy signature help
     use 'ray-x/lsp_signature.nvim'
+
+    -- symbols outline
+    use 'simrat39/symbols-outline.nvim'
 
     -- extra completion sources
     use 'hrsh7th/cmp-omni'
