@@ -10,10 +10,7 @@ read -r -p "Proceed [y/n]? " ANSWER
 if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     # pyright
     echo "Installing pylsp"
-    eval "$(pyenv init -)"
-    pyenv shell py3nvim
     pip install --upgrade "python-lsp-server[all]"
-    pyenv shell --unset
 
     # bashl
     echo "Installing bash-language-server"
