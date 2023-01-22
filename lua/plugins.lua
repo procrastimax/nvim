@@ -3,7 +3,7 @@ vim.g["airline#extensions#tabline#fnamemod"] = ':t'
 vim.g["airline_powerline_fonts"] = 1
 vim.g["airline_theme"] = 'nord'
 
-vim.g["python3_host_prog"] = '$HOME/.pyenv/versions/py3nvim/bin/python'
+vim.g["python3_host_prog"] = "/home/max/.pyenv/versions/py3nvim/bin/python"
 
 return require('packer').startup(function(use)
     -- Packer can manage itself

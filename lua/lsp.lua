@@ -146,7 +146,7 @@ lspconfig.pylsp.setup({
                 },
                 pydocstyle = {
                     enabled = true,
-                    ignore = { "D103", "D100" },
+                    ignore = { "D103", "D100", "D101", "D102" },
                 },
             }
         }
