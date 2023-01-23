@@ -15,7 +15,12 @@ if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
 
     # pyright
     echo "Installing pylsp"
+    eval "$(pyenv init -)"
+    pyenv shell py3nvim
+    pip install --upgrade "wheel"
+    pip install --upgrade "pynvim"
     pip install --upgrade "python-lsp-server[all]"
+    pyenv shell --unset
 
     # bashl
     echo "Installing bash-language-server"
