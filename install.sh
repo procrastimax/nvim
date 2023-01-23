@@ -22,8 +22,8 @@ if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
         eval "$(pyenv init -)"
         eval "$(pyenv virtualenv-init -)"
 
-        pyenv install 3.11.0
-        pyenv virtualenv 3.11.0 py3nvim
+        pyenv install 3.11.1
+        pyenv virtualenv 3.11.1 py3nvim
         pyenv shell py3nvim
         pyenv exec pip install wheel
         pyenv exec pip install pynvim
