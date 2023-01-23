@@ -8,6 +8,11 @@ echo "    -vscode-langservers-extracted (html, css, json, markdown)"
 read -r -p "Proceed [y/n]? " ANSWER
 
 if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
+
+    # updating pyenv
+    echo "Updating pyenv"
+    pyenv update
+
     # pyright
     echo "Installing pylsp"
     pip install --upgrade "python-lsp-server[all]"
