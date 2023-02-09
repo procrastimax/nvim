@@ -17,6 +17,7 @@ if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     echo "Installing pylsp"
     eval "$(pyenv init -)"
     pyenv shell py3nvim
+    pip install --upgrade "pip"
     pip install --upgrade "wheel"
     pip install --upgrade "pynvim"
     pip install --upgrade "python-lsp-server[all]"
