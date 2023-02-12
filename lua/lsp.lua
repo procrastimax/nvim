@@ -94,7 +94,7 @@ vim.api.nvim_set_option('updatetime', 300)
 -- LSP Servers
 ---
 
-lspconfig.sumneko_lua.setup({})
+lspconfig.lua_ls.setup({})
 lspconfig.rust_analyzer.setup({
     settings = {
         ["rust-analyzer"] = {
