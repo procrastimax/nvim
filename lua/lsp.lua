@@ -36,10 +36,10 @@ vim.api.nvim_create_autocmd('User', {
         end
 
         -- Jump to the definition
-        bufmap('n', '<leader>ld', '<cmd>lua vim.lsp.buf.definition()<cr>')
+        bufmap('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
 
         -- Jump to declaration
-        bufmap('n', '<leader>lD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+        bufmap('n', '<leader>gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
 
         -- Displays hover information about the symbol under the cursor
         bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
