@@ -125,20 +125,6 @@ lspconfig.rust_analyzer.setup({
 lspconfig.gopls.setup({})
 -- lspconfig.pyright.setup({})
 lspconfig.bashls.setup({})
-lspconfig.texlab.setup({
-    settings = {
-        ["texlab"] = {
-            build = {
-                onSave = true,
-                forwardSearchAfter = true,
-            },
-            forwardSearch = {
-                executable = "okular",
-                args = { "--noraise", "--unique", "file:%p#src:%l%f" },
-            }
-        },
-    }
-})
 lspconfig.cssls.setup({})
 lspconfig.jsonls.setup({})
 lspconfig.html.setup({})
@@ -162,10 +148,10 @@ lspconfig.pylsp.setup({
 -- Enable tree sitter support
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = { "rust", "python", "go", "bash", "html", "css", "markdown", "latex", "c", "make", "java", "lua",
-        "json", "vim", "bibtex", "yaml", "javascript", "kotlin", "dockerfile", "toml", "ruby", "comment" },
+        "json", "vim", "bibtex", "yaml", "javascript", "kotlin", "dockerfile", "toml", "ruby", "comment", "nix" },
     sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
     highlight = {
-        enable = true, -- false will disable the whole extension
+        enable = true,    -- false will disable the whole extension
         additional_vim_regex_highlighting = false,
     },
     indent = {
@@ -183,7 +169,7 @@ require 'nvim-treesitter.configs'.setup {
 }
 
 lspconfig.ltex.setup {
-    filetypes = { "latex", "tex", "bib", "markdown", "gitcommit", "text" },
+    filetypes = { "latex", "tex", "bib", "markdown", "gitcommit", "plaintext" },
     settings = {
         ltex = {
             enabled = { "latex", "tex", "bib", "markdown", },
@@ -199,6 +185,22 @@ lspconfig.ltex.setup {
         },
     },
 }
+
+lspconfig.texlab.setup({
+    --root_dir = lspconfig.util.root_pattern('main.tex'),
+    settings = {
+        ["texlab"] = {
+            build = {
+                onSave = true,
+                forwardSearchAfter = true,
+            },
+            forwardSearch = {
+                executable = "okular",
+                args = { "--noraise", "--unique", "file:%p#src:%l%f" },
+            }
+        },
+    }
+})
 
 
 vim.opt.foldmethod = "expr"
