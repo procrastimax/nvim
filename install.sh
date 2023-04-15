@@ -29,6 +29,10 @@ if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
         pyenv exec pip install pynvim
     fi
 
+    echo "Installing n-gram dictionary for english words (COHA corpus)"
+    mkdir -pv ~/documents/dicts/ngrams/en
+    wget -vP ~/documents/dicts/ngrams/en/ https://www.ngrams.info/coha/download/4_pos_n.zip
+    unzip ~/documents/dicts/ngrams/en/4_pos_n.zip -d ~/documents/dicts/ngrams/en/
 
 else
     echo "Quitting..."

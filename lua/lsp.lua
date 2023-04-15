@@ -169,19 +169,19 @@ require 'nvim-treesitter.configs'.setup {
 }
 
 lspconfig.ltex.setup {
-    filetypes = { "latex", "tex", "bib", "markdown", "gitcommit", "plaintext" },
+    filetypes = { "tex" },
     settings = {
         ltex = {
-            enabled = { "latex", "tex", "bib", "markdown", },
-            language = "en",
-            diagnosticSeverity = "information",
+            enabled = { "latex", "tex" },
+            language = "en-US",
+            diagnosticSeverity = "hint",
             sentenceCacheSize = 2000,
             additionalRules = {
                 enablePickyRules = true,
-                motherTongue = "en",
+                motherTongue = "de-DE",
+                languageModel = "/home/max/documents/dicts/ngrams/en/"
             },
-            disabledRules = {
-            },
+            disabledRules = {    },
         },
     },
 }
