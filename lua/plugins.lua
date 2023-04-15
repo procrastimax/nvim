@@ -5,6 +5,9 @@ vim.g["airline_theme"] = 'nord'
 
 vim.g["python3_host_prog"] = "/home/max/.pyenv/versions/py3nvim/bin/python"
 
+-- recognize tex files more easily
+vim.g["tex_flavor"] = "latex"
+
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
