@@ -1,6 +1,7 @@
 source $HOME/.config/nvim/config/general.vim
 source $HOME/.config/nvim/config/keys.vim
 
+
 lua require('plugins')
 lua require('lsp')
 lua require('cmp-setup')

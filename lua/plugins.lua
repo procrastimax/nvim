@@ -46,4 +46,10 @@ return require('packer').startup(function(use)
 
     -- treesitter
     use 'nvim-treesitter/nvim-treesitter'
+
+    use {
+        "williamboman/mason.nvim",
+         "williamboman/mason-lspconfig.nvim",
+        run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+    }
 end)

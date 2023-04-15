@@ -16,18 +16,8 @@ if [ "$ANSWER" = "y" ] || [ "$ANSWER" = "Y" ]; then
     cd ..
     rm -rf fonts
 
-    if command -v pyenv &> /dev/null; then
-        echo "pyenv is installed proceeding with proper pynvim setup"
-        # keep in mind to update this for newer python versions
-        eval "$(pyenv init -)"
-        eval "$(pyenv virtualenv-init -)"
+    pip install pynvim
 
-        pyenv install 3.11.1
-        pyenv virtualenv 3.11.1 py3nvim
-        pyenv shell py3nvim
-        pyenv exec pip install wheel
-        pyenv exec pip install pynvim
-    fi
 else
     echo "Quitting..."
 fi

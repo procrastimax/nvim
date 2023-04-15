@@ -2,6 +2,12 @@
 -- Global Config
 ---
 
+require("mason").setup()
+require("mason-lspconfig").setup {
+    ensure_installed = { "lua_ls", "rust_analyzer", "nil_ls", "gopls", "texlab", "ltex", "jedi_language_server", "bashls",
+        "html", "jsonls", "cssls" }
+}
+
 local lsp_defaults = {
     flags = {
         debounce_text_changes = 150,
@@ -175,6 +181,25 @@ require 'nvim-treesitter.configs'.setup {
         },
     },
 }
+
+lspconfig.ltex.setup {
+    filetypes = { "latex", "tex", "bib", "markdown", "gitcommit", "text" },
+    settings = {
+        ltex = {
+            enabled = { "latex", "tex", "bib", "markdown", },
+            language = "en",
+            diagnosticSeverity = "information",
+            sentenceCacheSize = 2000,
+            additionalRules = {
+                enablePickyRules = true,
+                motherTongue = "en",
+            },
+            disabledRules = {
+            },
+        },
+    },
+}
+
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
