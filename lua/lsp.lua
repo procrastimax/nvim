@@ -4,7 +4,7 @@
 
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = { "lua_ls", "rust_analyzer", "nil_ls", "gopls", "texlab", "ltex", "jedi_language_server", "bashls",
+    ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "texlab", "ltex", "pylsp", "bashls",
         "html", "jsonls", "cssls" }
 }
 
