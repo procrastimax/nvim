@@ -168,20 +168,21 @@ require 'nvim-treesitter.configs'.setup {
     },
 }
 
-lspconfig.ltex.setup {
+require "ltex-ls".setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
     filetypes = { "tex" },
     settings = {
         ltex = {
-            enabled = { "latex", "tex" },
+            enabled = { "latex", "tex", "bib" },
             language = "en-US",
             diagnosticSeverity = "hint",
             sentenceCacheSize = 2000,
             additionalRules = {
                 enablePickyRules = true,
                 motherTongue = "de-DE",
-                languageModel = "/home/max/documents/dicts/ngrams/en/"
             },
-            disabledRules = {    },
+            disabledRules = {},
         },
     },
 }
