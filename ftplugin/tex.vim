@@ -27,6 +27,8 @@ nnoremap <leader>ttt a\texttt{}<ESC>i
 nnoremap <leader>ul a\underline{}<ESC>i
 nnoremap <leader>quot a\enquote{}<ESC>i
 
+nnoremap <leader>ac a\ac{}<ESC>i
+
 nnoremap <leader>list i\begin{itemize}<ESC>o\item<ESC>o<BACKSPACE><BACKSPACE>\end{itemize}<ESC>
 nnoremap <leader>enum i\begin{enumerate}<ESC>o\item<ESC>o<BACKSPACE><BACKSPACE>\end{enumerate}<ESC>
 
