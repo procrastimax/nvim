@@ -52,10 +52,15 @@ return require('packer').startup(function(use)
 
     use {
         "williamboman/mason.nvim",
-         "williamboman/mason-lspconfig.nvim",
+        "williamboman/mason-lspconfig.nvim",
         run = ":MasonUpdate" -- :MasonUpdate updates registry contents
     }
 
     -- for more feature comfort when using tex-ls
     use { 'vigoux/ltex-ls.nvim', requires = 'neovim/nvim-lspconfig' }
+
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons' }
+    }
 end)
