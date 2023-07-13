@@ -63,4 +63,7 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim',
         requires = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons' }
     }
+    use "lukas-reineke/indent-blankline.nvim"
 end)
+
+
