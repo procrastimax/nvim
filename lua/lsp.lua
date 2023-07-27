@@ -3,10 +3,29 @@
 ---
 
 require("mason").setup()
-require("mason-lspconfig").setup {
-    ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "texlab", "ltex", "pylsp", "bashls",
+require("mason-lspconfig").setup({
+    ensure_installed = { "lua_ls", "rust_analyzer", "gopls", "texlab", "ltex", "bashls",
         "html", "jsonls", "cssls" }
+})
+
+local null_servers = {
+    "isort",
+    "black",
 }
+require("mason-null-ls").setup({
+    ensure_installed = null_servers, -- stuff supported by mason
+    automatic_installation = true,
+    automatic_setup = true,
+    handlers = {},
+})
+
+require("null-ls").setup({
+    sources = {
+        -- Anything not supported by mason.
+    }
+})
+
+
 
 local lsp_defaults = {
     flags = {
@@ -123,7 +142,6 @@ lspconfig.rust_analyzer.setup({
 })
 
 lspconfig.gopls.setup({})
--- lspconfig.pyright.setup({})
 lspconfig.bashls.setup({})
 lspconfig.cssls.setup({})
 lspconfig.jsonls.setup({})
@@ -133,8 +151,9 @@ lspconfig.pylsp.setup({
     settings = {
         pylsp = {
             plugins = {
+                autopep8 = { enabled = false },
                 pycodestyle = {
-                    maxLineLength = 100
+                    ignore = { "E501", "W503" },
                 },
                 pydocstyle = {
                     enabled = true,

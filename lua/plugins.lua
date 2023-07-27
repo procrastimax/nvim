@@ -64,6 +64,8 @@ return require('packer').startup(function(use)
         requires = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons' }
     }
     use "lukas-reineke/indent-blankline.nvim"
+
+    -- null-ls to hook formatters into lsp
+    use { "jose-elias-alvarez/null-ls.nvim" }
+    use { "jay-babu/mason-null-ls.nvim" }
 end)
-
-
