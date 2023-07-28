@@ -153,7 +153,7 @@ lspconfig.pylsp.setup({
             plugins = {
                 autopep8 = { enabled = false },
                 pycodestyle = {
-                    ignore = { "E501", "W503" },
+                    ignore = { "E501", "W503", "E251" },
                 },
                 pydocstyle = {
                     enabled = true,
