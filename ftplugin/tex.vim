@@ -12,6 +12,8 @@ set nofoldenable
 " dont set window title for latex files, since compilin them somehow messes with the titlt update -> gets updated multiple times per second
 set notitle
 
+nnoremap W :w<CR>:TexlabBuild<CR>
+
 " insert math arrows
 nnoremap <leader>rarr a$\rightarrow$<ESC>
 nnoremap <leader>larr a$\leftarrow$<ESC>

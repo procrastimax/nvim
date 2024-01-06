@@ -199,7 +199,6 @@ require "ltex-ls".setup {
             sentenceCacheSize = 2000,
             additionalRules = {
                 enablePickyRules = true,
-                motherTongue = "de-DE",
             },
             disabledRules = {},
         },
@@ -211,7 +210,7 @@ lspconfig.texlab.setup({
     settings = {
         ["texlab"] = {
             build = {
-                onSave = true,
+                onSave = false,
                 forwardSearchAfter = true,
             },
             forwardSearch = {
